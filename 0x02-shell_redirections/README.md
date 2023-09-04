@@ -1,0 +1,1 @@
+Input/Output (I/O) redirection in Linux refers to the ability of the Linux operating system that allows us to change the standard input ( stdin ) and standard output ( stdout ) when executing a command on the termina
