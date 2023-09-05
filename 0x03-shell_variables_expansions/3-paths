@@ -1,2 +1,2 @@
-#!/bibash
-echo $PATH | tr ':' '\n' | wc -l
+#!/bin/bash
+echo $((`echo $PATH | grep -o ":/" | wc -l`+ 1))
