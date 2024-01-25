@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Display User Information from /etc/passwd
+# This script reads the contents of the /etc/passwd file, which stores information about user accounts.
+# It extracts specific details such as username, user ID (UID), and user home directory path.
+
+while read -r passwd; do
+  echo "$passwd" | cut -d ':' -f1,3,6
+done < "/etc/passwd"
