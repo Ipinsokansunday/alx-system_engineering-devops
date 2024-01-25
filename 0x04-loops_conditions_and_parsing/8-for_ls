@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Displays the contents of the current directory in list format.
+# Only displays the part of the name after the first dash.
+
+# Get the list of files in the current directory
+file_list=$(ls)
+for file in $file_list; do
+  name_part=$(basename "$file" | cut -d'-' -f2)
+  echo "$name_part"
+done
