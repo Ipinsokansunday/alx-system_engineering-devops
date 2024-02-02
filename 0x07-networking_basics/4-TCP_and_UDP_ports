@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+#Script to show active listening ports, including details such as
+#listening sockets, PID, and program names.
+
+#Usage:
+#Run the script to display information about active listening ports
+# including details about the sockets, associated PID, and program names.
+
+#Command:
+netstat -l --program
