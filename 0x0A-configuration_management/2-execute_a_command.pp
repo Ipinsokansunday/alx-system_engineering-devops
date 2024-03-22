@@ -1,3 +1,4 @@
+#!/usr/bin/pup
 # Puppet manifest to kill a process named killmenow
 
 exec { 'killmenow':
