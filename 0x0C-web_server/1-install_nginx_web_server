@@ -1,4 +1,5 @@
-1-install_nginx_web_server
+#!/usr/bin/env bash
+
 # Update package index and install nginx with -y flag to auto-confirm prompts
 apt-get update
 apt-get install -y nginx
