@@ -25,6 +25,11 @@ def number_of_subscribers(subreddit):
     )
 
     if req.status_code == 200:
-        return req.json().get("data").get("subscribers")
+        # Check if 'data' key exists and 'subscribers' key exists within 'data'
+        data = req.json().get("data")
+        if data and "subscribers" in data:
+            return data["subscribers"]
+        else:
+            return 0
     else:
         return 0
