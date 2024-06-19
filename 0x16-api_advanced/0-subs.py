@@ -22,7 +22,11 @@ def number_of_subscribers(subreddit):
         if response.status_code == 200:
             data = response.json()
             return data['data'].get('subscribers', 0)
+        elif response.status_code == 404:
+            # Subreddit not found
+            return 0
         else:
+            # Handle other errors, like 403 Forbidden
             return 0
     except requests.RequestException:
         return 0
